@@ -55,7 +55,7 @@ public class JwtTokenUtil {
 
         return Jwts.builder()
                 .setClaims(claims)
-                .setIssuer("http://temelt.com")
+                .setIssuer("fatihaksoy")
                 .setIssuedAt(new Date(System.currentTimeMillis()))
                 .setExpiration(new Date(System.currentTimeMillis() + ACCESS_TOKEN_VALIDITY_SECONDS))
                 .signWith(SignatureAlgorithm.HS256, SIGNING_KEY)

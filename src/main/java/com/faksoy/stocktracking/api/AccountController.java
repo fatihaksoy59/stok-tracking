@@ -1,6 +1,7 @@
 package com.faksoy.stocktracking.api;
 
 import com.faksoy.stocktracking.dto.LoginRequest;
+import com.faksoy.stocktracking.dto.RegisterResult;
 import com.faksoy.stocktracking.dto.RegistrationRequest;
 import com.faksoy.stocktracking.dto.TokenResponse;
 import com.faksoy.stocktracking.entity.User;
@@ -33,12 +34,13 @@ public class AccountController {
         authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(request.getUsername(), request.getPassword()));
         final User user = userRepository.findByUsername(request.getUsername());
         final String token = jwtTokenUtil.generateToken(user);
+
         return ResponseEntity.ok(new TokenResponse(user.getUsername(), token));
     }
 
     @RequestMapping(value = "/register", method = RequestMethod.POST)
-    public ResponseEntity<Boolean> register(@RequestBody RegistrationRequest registrationRequest) throws AuthenticationException {
-        Boolean response = userService.register(registrationRequest);
+    public ResponseEntity<RegisterResult> register(@RequestBody RegistrationRequest registrationRequest) throws AuthenticationException {
+        RegisterResult response = userService.register(registrationRequest);
         return ResponseEntity.ok(response);
     }
 

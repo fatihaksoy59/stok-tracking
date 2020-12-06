@@ -1,8 +1,8 @@
 package com.faksoy.stocktracking.service;
 
 import com.faksoy.stocktracking.dto.ProductDto;
-import com.faksoy.stocktracking.util.TPage;
-import org.springframework.data.domain.Pageable;
+
+import java.util.List;
 
 public interface ProductService {
 
@@ -10,7 +10,5 @@ public interface ProductService {
 
     ProductDto getById(Long id);
 
-    TPage<ProductDto> getAllPageable(Pageable pageable);
-
-    ProductDto getByProductName(String productName);
+    List<ProductDto> getAll();
 }

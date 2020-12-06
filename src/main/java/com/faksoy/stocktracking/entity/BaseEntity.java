@@ -2,6 +2,7 @@ package com.faksoy.stocktracking.entity;
 
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.data.annotation.CreatedBy;
 
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;

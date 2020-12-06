@@ -31,7 +31,11 @@ public class Product extends BaseEntity {
     @Column(name = "unit", length = 1000)
     private String unit;
 
+    @JoinColumn(name = "puser_id")
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    private User user;
+
     @JoinColumn(name = "storeroom_id")
-    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
     private StoreRoom storeRoom;
 }
