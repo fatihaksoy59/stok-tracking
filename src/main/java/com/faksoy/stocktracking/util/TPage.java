@@ -1,9 +1,11 @@
 package com.faksoy.stocktracking.util;
+
 import lombok.Data;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Sort;
 
 import java.util.List;
+
 @Data
 public class TPage<T> {
 
