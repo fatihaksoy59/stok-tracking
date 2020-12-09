@@ -1,5 +1,9 @@
 ### Proje Hakkında
 
+Proje test swagger link:https://testfatihsb.herokuapp.com/swagger-ui.html
+
+İsterseniz dokümantasyona bakarak postmanden istek atabilirsiniz.
+
 -Bu proje Spring Boot kullanarak geliştirilmiştir.
 -Projeyi çalıştırmak için bazı ayarlamara ihtiyacımız var.
 
